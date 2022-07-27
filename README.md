@@ -1,2 +1,2 @@
 # server-automation-scripts
-Server Automation Scripts
+Server Automation Scripts to quickly install apps in Debian & Ubuntu
