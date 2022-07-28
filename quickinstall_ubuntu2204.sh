@@ -41,7 +41,7 @@ else
         curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/initial-setup_ubuntu2204.sh -o /tmp/initial-setup_ubuntu2204.sh
         
         echo '2/3: Installing & Configuring ...'
-        sh /tmp/initial-setup_ubuntu2204.sh
+        sh /tmp/initial-setup_ubuntu2204.sh > /dev/null 2>&1
         
         echo '3/3: Removing setup script ...'
         rm /tmp/initial-setup_ubuntu2204.sh
@@ -58,7 +58,7 @@ else
         curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/docker-dockercompose_ubuntu2204.sh -o /tmp/docker-dockercompose_ubuntu2204.sh
         
         echo '2/3: Installing & Configuring ...'
-        sh /tmp/docker-dockercompose_ubuntu2204.sh
+        sh /tmp/docker-dockercompose_ubuntu2204.sh > /dev/null 2>&1
 
         echo '3/3: Removing setup script ...'
         rm /tmp/docker-dockercompose_ubuntu2204.sh
@@ -75,7 +75,7 @@ else
         curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/nginx_php8-fpm_ubuntu2204.sh -o /tmp/nginx_php8-fpm_ubuntu2204.sh
         
         echo '2/3: Installing & Configuring ...'
-        sh /tmp/nginx_php8-fpm_ubuntu2204.sh
+        sh /tmp/nginx_php8-fpm_ubuntu2204.sh > /dev/null 2>&1
         
         echo '3/3: Removing setup script ...'
         rm /tmp/nginx_php8-fpm_ubuntu2204.sh
@@ -92,7 +92,7 @@ else
     #    curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/nginx_php8-fpm_ubuntu2204.sh -o /tmp/nginx_php8-fpm_ubuntu2204.sh
         
     #    echo '2/3: Installing & Configuring ...'
-    #    sh /tmp/nginx_php8-fpm_ubuntu2204.sh
+    #    sh /tmp/nginx_php8-fpm_ubuntu2204.sh > /dev/null 2>&1
         
     #   echo '3/3: Removing setup script ...'
     #    rm /tmp/nginx_php8-fpm_ubuntu2204.sh
