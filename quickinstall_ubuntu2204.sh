@@ -1,21 +1,22 @@
 #!/bin/bash
 
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root / sudo"
-  exit
-fi
+if [ $(id -u) != "0" ]; then
+    echo "Please run as with sudo permissions"
+else
 
 # INITIAL SETUP - Ubuntu 22.04 - REQUIRED
-#curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/initial-setup_ubuntu2204.sh -o /tmp/initial-setup_ubuntu2204.sh && sh /tmp/initial-setup_ubuntu2204.sh
+echo "Running initial setup ..." && curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/initial-setup_ubuntu2204.sh -o /tmp/initial-setup_ubuntu2204.sh >
 
 # Docker Compose
-#curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/docker-dockercompose_ubuntu2204.sh -o /tmp/docker-dockercompose_ubuntu2204.sh && sh /tmp/docker-dockercompose_ubuntu2204.sh
+#echo "Installing Docker & Docker Compose ..." && curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/docker-dockercompose_ubuntu2204.sh -o /tmp/docker->
 
 # Nginx + PHP 8.0 FPM
-#curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/nginx_php8-fpm_ubuntu2204.sh -o /tmp/nginx_php8-fpm_ubuntu2204.sh && sh /tmp/nginx_php8-fpm_ubuntu2204.sh
+#echo "Installing Nginx + PHP8.0-FPM ..." && curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/nginx_php8-fpm_ubuntu2204.sh -o /tmp/nginx_php8-fpm_ubu>
 
 # MariaDB
-#curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/mariabdb_ubuntu2204.sh -o /tmp/mariadb_ubuntu2204.sh && sh /tmp/mariadb_ubuntu2204.sh
+#echo "Installing MariaDB ..." && curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/mariabdb_ubuntu2204.sh -o /tmp/mariadb_ubuntu2204.sh && sh /tmp/ma>
 
 # Reboot server - REQUIRED
-#reboot
+#echo "Rebooting..." && reboot
+
+fi
