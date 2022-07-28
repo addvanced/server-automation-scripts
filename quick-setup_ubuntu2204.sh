@@ -9,6 +9,8 @@ DEBIAN_FRONTEND=noninteractive apt -y upgrade
 DEBIAN_FRONTEND=noninteractive apt -y dist-upgrade
 apt -y autoremove && apt -y autoclean
 
+apt install -y unzip
+
 # Set timezone to Europe/Copenhagen
 ln -fs /usr/share/zoneinfo/Europe/Copenhagen /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
