@@ -12,7 +12,7 @@ else
         echo "0. Initial Setup for Ubuntu 22.04"
         echo "1. Docker & Docker-Compose"
         echo "2. Nginx + PHP 8.0 FPM"
-        echo "3. MariaDB"
+        #echo "3. MariaDB"
         echo " "
         echo "999. Reboot after install"
 
@@ -105,9 +105,9 @@ else
       echo "Nothing was installed."
     else
         if [[ ${installModules["999"]} ]]; then
-            echo "Rebooting ..."
-            sleep 5
-            echo "NOW!"
+            echo "Rebooting in 10 seconds ..."
+            sleep 10
+            reboot
         fi
     fi
 fi

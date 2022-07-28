@@ -48,9 +48,6 @@ This script was intentionally made with the purpose of quickly installing server
 ```
 #!/bin/bash
 
-curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/quickinstall_ubuntu2204.sh \
-    -o /tmp/install.sh \
-    && chmod +x /tmp/install.sh \
-    && ./tmp/install.sh 0,1,999
+curl -fsSL https://raw.githubusercontent.com/systemedz/server-automation-scripts/develop/quickinstall_ubuntu2204.sh -o /tmp/install.sh && chmod +x /tmp/install.sh && /tmp/install.sh 0,1,999
 ```
 ___
