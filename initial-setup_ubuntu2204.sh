@@ -58,6 +58,3 @@ ufw allow 223
 
 # Enable & Reload UFW
 ufw enable && ufw reload
-
-# Reboot server
-reboot
